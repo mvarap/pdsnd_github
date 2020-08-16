@@ -82,7 +82,7 @@ def load_data(city, month, day):
     months = ['january', 'february','march', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
 
     #update name of new york in case it is incomplete
-    if city=='new york':
+    if city == 'new york':
         city+=' city'
 
     df = pd.read_csv(CITY_DATA[city])
@@ -94,12 +94,12 @@ def load_data(city, month, day):
 
     #filter by month
     if month != 'all':
-        m = months.index(month)+1
+        m = months.index(month) + 1
         df = df[df['month']==m]
 
-      #filter by day
+    #filter by day
     if day != 'all':
-        df = df[df['day_of_week']==day.title()]      
+        df = df[df['day_of_week'] == day.title()]      
 
     return df
 
@@ -164,7 +164,7 @@ def time_conversion(seconds):
     hour = int(seconds//3600)
     rest_hour = seconds%3600
     minute = int(rest_hour//60)
-    second=rest_hour%60
+    second = rest_hour%60
 
     return hour, minute, second
 
