@@ -1,6 +1,6 @@
-#import time
-#import pandas as pd
-#import numpy as np
+import time
+import pandas as pd
+import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -93,12 +93,12 @@ def load_data(city, month, day):
 
     #filter by month
     if month != 'all':
-        m = months.index(month)+1
+        m = months.index(month) + 1
         df = df[df['month']==m]
 
-      #filter by day
+    #filter by day
     if day != 'all':
-        df = df[df['day_of_week']==day.title()]      
+        df = df[df['day_of_week'] == day.title()]      
 
     return df
 
