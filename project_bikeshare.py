@@ -1,6 +1,6 @@
-#import time
-#import pandas as pd
-#import numpy as np
+import time
+import pandas as pd
+import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -87,6 +87,7 @@ def load_data(city, month, day):
 
     df = pd.read_csv(CITY_DATA[city])
 
+    #create time columns in order to be able to filter
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
@@ -159,6 +160,7 @@ def station_stats(df):
 def time_conversion(seconds):
     """Converts seconds to the format hh:mm:ss
     """
+    #time conversion calculation
     hour = int(seconds//3600)
     rest_hour = seconds%3600
     minute = int(rest_hour//60)
