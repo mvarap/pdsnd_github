@@ -2,11 +2,11 @@
 15th August 2020
 
 ### Project Title
-Bikeshare Project
+Bikeshare statistics Project
 
 ### Description
 It´s a Python program to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. 
-Calculate statisticsand build an interactive environment where users chooses tha data and filter for a dataset to analyze.
+Calculate statistics and build an interactive environment where users chooses tha data and filter for a dataset to analyze.
 
 ### Files used
 project_bikeshare.py
